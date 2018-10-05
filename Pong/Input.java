@@ -1,4 +1,4 @@
-//Created by Christopher Wolff
+package Pong;//Created by Christopher Wolff
 
 import java.awt.Component;
 import java.awt.event.KeyListener; //interface for overriding and defining behavior
@@ -7,12 +7,22 @@ import java.awt.event.KeyEvent; //includes all of the constants used for input
 
 public class Input implements KeyListener{
 	
-	private boolean[] keys; 
+	private boolean[] keys;
+	private static Input instance;
 
-	//constructor for assigning listener to 
-	//jframe component
-	public Input(Component c){
-		c.addKeyListener(this);
+    public static Input getInstance() {
+        if(instance == null){
+            instance = new Input();
+        }
+        return instance;
+    }
+
+
+    public void setComponentListener(Component c){
+        c.addKeyListener(this);
+    }
+
+	private Input(){
 		keys = new boolean[256]; 
 	}
 

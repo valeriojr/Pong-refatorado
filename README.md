@@ -18,7 +18,7 @@ javac *.java
 ~~~
 3. Run the game using:
 ~~~
-java Game
+java Pong.Game
 ~~~
 
 
