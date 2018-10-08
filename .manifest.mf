@@ -1,1 +1,1 @@
-Main-class: Pong.Game
+Main-class: pong.Game

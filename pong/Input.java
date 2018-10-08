@@ -1,8 +1,8 @@
-package Pong;//Created by Christopher Wolff
+package pong;//Created by Christopher Wolff
 
-import java.awt.Component;
-import java.awt.event.KeyListener; //interface for overriding and defining behavior
-import java.awt.event.KeyEvent; //includes all of the constants used for input
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 
 public class Input implements KeyListener{
@@ -44,8 +44,7 @@ public class Input implements KeyListener{
 	public void keyTyped(KeyEvent key){
 		
 	}
-	
-	//custom function for input polling
+
 	 public boolean isKeyDown(int keyNum){
 		 if (keyNum >0 && keyNum < 256){
 			return keys[keyNum];
