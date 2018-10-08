@@ -68,6 +68,7 @@ public class Ball extends GameObject {
             }
 
             p.score();
+            reset();
         }
     }
 
@@ -90,5 +91,13 @@ public class Ball extends GameObject {
 
     public double getAngle() {
         return angle;
+    }
+
+    public void reset(){
+	    x = GAME_WIDTH/2;
+	    y = GAME_HEIGHT/2;
+	    angle += 3.141519;
+        xDir = Math.cos(angle);
+        yDir = Math.sin(angle);
     }
 }

@@ -27,7 +27,7 @@ public class Paddle extends GameObject {
 
     @Override
 	public void draw(Graphics2D g){
-        g.fillRect((int) (x - width/2), (int) (y - height/2), (int) (x + width/2), (int) (y + height/2));
+        g.fillRect((int) (x - width/2), (int) (y - height/2), (int) width, (int) height);
     }
 
     public static class Builder{
